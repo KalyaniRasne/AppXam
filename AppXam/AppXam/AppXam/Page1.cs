@@ -23,18 +23,18 @@ namespace AppXam
             Button button = new Button { Text = "Make It So",
                 FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Fill };
+                VerticalOptions = LayoutOptions.Fill};
             button.Clicked += (sender, args) => { button.Text = "It is so!"; };
 
-            Entry entry = new Entry { Placeholder = "Username",
+        Entry entry = new Entry { Placeholder = "Username",
                 VerticalOptions = LayoutOptions.Center,
                 Keyboard = Keyboard.Text };
 
-            BoxView boxView = new BoxView { Color = Color.Silver,
-                WidthRequest = 150,
-                HeightRequest = 150,
+            BoxView boxView = new BoxView { Color = Color.AliceBlue,
+                WidthRequest = 270,
+                HeightRequest = 100,
                 HorizontalOptions = LayoutOptions.StartAndExpand,
-                VerticalOptions = LayoutOptions.Fill };
+                VerticalOptions = LayoutOptions.End };
             Image image = new Image { Source = "img.jpg",
                 Aspect = Aspect.AspectFit, HorizontalOptions = LayoutOptions.End,
                 VerticalOptions = LayoutOptions.Fill };
@@ -70,9 +70,9 @@ namespace AppXam
             ScrollView scrollView = new ScrollView { VerticalOptions = LayoutOptions.FillAndExpand,
                 Content = stackLayout };
             // Accomodate iPhone status bar.                
-            this.Padding = new Thickness(60,70,80,90); 
+            //this.Padding = new Thickness(10,40,70,100); 
             this.Content = scrollView;
-            //this.Padding = new Thickness(20,20,20,20);
+            this.Padding = new Thickness(20,20,20,20);
             this.BackgroundColor = Color.Pink;
 
         }
